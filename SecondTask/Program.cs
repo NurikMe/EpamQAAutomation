@@ -2,7 +2,7 @@
 
 namespace SecondTask
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -14,7 +14,6 @@ namespace SecondTask
                 NumberSystemConverter Converter = new NumberSystemConverter();
                 string result = Converter.BasisConverter(number, newBasis);
                 Console.WriteLine(result);
-
             }
         }
     }

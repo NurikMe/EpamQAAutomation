@@ -15,16 +15,19 @@ namespace SecondTask
             try
             {
                 bool negative = false;
+                StringBuilder numberInNewBasis = new StringBuilder();
+
                 if (newBasis < minimumBasis || newBasis > maximumBasis)
                 {
                     throw new Exception("New Basis must be less than 20 and bigger than 2");
                 }
-                StringBuilder numberInNewBasis = new StringBuilder();
+
                 if(number < 0)
                 {
                     negative = true;
                     number = Math.Abs(number);
                 }
+
                 while (number != 0)
                 {
                     int remainder = number % newBasis;
@@ -38,6 +41,7 @@ namespace SecondTask
                     }
                     number /= newBasis;
                 }
+
                 if (negative)
                 {
                     numberInNewBasis.Append('-');
@@ -45,9 +49,9 @@ namespace SecondTask
 
                 return new string (numberInNewBasis.ToString().Reverse().ToArray());
             }
-            catch (Exception e)
+            catch (Exception exception)
             {
-                return e.Message.ToString();
+                return exception.Message.ToString();
             }
         }
     }
