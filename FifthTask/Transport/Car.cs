@@ -1,12 +1,12 @@
 ﻿using System;
-using Task7.Car_Parts;
+using FifthTask.CarParts;
 
-namespace Task7.Transport
+namespace FifthTask.Transport
 {
     [Serializable]
     public class Car : Vehicle
     {
-        private AveilableBodyTypes bodyType;
+        private AveilableBodyTypesEnum bodyType;
 
         public override Engine Engine { get; set; }
 
@@ -14,7 +14,7 @@ namespace Task7.Transport
 
         public override Transmission Transmission { get; set; }
 
-        public AveilableBodyTypes BodyType
+        public AveilableBodyTypesEnum BodyType
         {
             get { return bodyType; }
             set
@@ -25,7 +25,7 @@ namespace Task7.Transport
 
         private Car() : base(null, null, null) { }
 
-        public Car(Engine engine, Chassis chassis, Transmission transmission, AveilableBodyTypes newBodyType = AveilableBodyTypes.Coupe) : base(engine, chassis, transmission)
+        public Car(Engine engine, Chassis chassis, Transmission transmission, AveilableBodyTypesEnum newBodyType = AveilableBodyTypesEnum.Coupe) : base(engine, chassis, transmission)
         {
             Engine = engine;
             Chassis = chassis;

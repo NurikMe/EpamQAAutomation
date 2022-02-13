@@ -4,24 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task7.Car_Parts
+namespace FifthTask.CarParts
 {
     [Serializable]
-    public class Transmission : Abstract_Part
+    public class Transmission : AbstractPart
     {
+        public AveilableTransmissionTypesEnum TransmissionType { get; set; }
+
+        public int NumberOfGears { get; set; }
+
+        public string Producer { get; set; }
+
         private Transmission() { }
-        public Transmission(AveilableTransmissionTypes newTransmissionType, int newNumberOfGears, string newProducer)
+
+        public Transmission(AveilableTransmissionTypesEnum newTransmissionType, int newNumberOfGears, string newProducer)
         {
             TransmissionType = newTransmissionType;
             NumberOfGears = newNumberOfGears;
             Producer = newProducer;
         }
-
-        public AveilableTransmissionTypes TransmissionType { get; set; }
-
-        public int NumberOfGears { get; set; }
-
-        public string Producer { get; set; }
 
         protected override string Specification() => $"Transmission Type: {TransmissionType}\n\tNumber of Gears: {NumberOfGears}\n\tTransmission Producer: {Producer}\n";
     }

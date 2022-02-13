@@ -1,31 +1,20 @@
 ﻿
-namespace Task7.Transport
+namespace FifthTask.Transport
 {
-    public enum AveilableColour
-    {
-        Red,
-        Blue,
-        Black,
-        Green
-    }
     class Colours
     {
-        public static string Colour(AveilableColour type)
+        public static string Colour(AveilableColourEnum type)
         {
             switch (type)
             {
-                case AveilableColour.Black:
+                case AveilableColourEnum.Black:
                     return "Black";
-                    break;
-                case AveilableColour.Blue:
+                case AveilableColourEnum.Blue:
                     return "Blue";
-                    break;
-                case AveilableColour.Green:
+                case AveilableColourEnum.Green:
                     return "Green";
-                    break;
-                case AveilableColour.Red:
+                case AveilableColourEnum.Red:
                     return "Red";
-                    break;
             }
             return "None of aveilable colours";
         }

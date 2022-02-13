@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Task7.Car_Parts;
-using Task7.Transport;
+using FifthTask.CarParts;
+using FifthTask.Transport;
 using System.Xml.Serialization;
 using System.IO;
 
-namespace Task7
+namespace FifthTask
 {
     class Program
     {
@@ -13,21 +13,21 @@ namespace Task7
         {
             List<Vehicle> Vehicles = new List<Vehicle>
             {
-                new Car(new Engine(200m, 2m, AveilableEngineTypes.GasEngine, 12345)
+                new Car(new Engine(200m, 2m, AveilableEngineTypesEnum.GasEngine, 12345)
                     , new Chassis(4, 32374, 320)
-                    , new Transmission(AveilableTransmissionTypes.AutomaticGearbox,5,"Huawei")
-                    ,AveilableBodyTypes.SportsCar),
-                new Bus(new Engine(320m, 4m, AveilableEngineTypes.ElectricEngine, 954759)
+                    , new Transmission(AveilableTransmissionTypesEnum.AutomaticGearbox,5,"Huawei")
+                    ,AveilableBodyTypesEnum.SportsCar),
+                new Bus(new Engine(320m, 4m, AveilableEngineTypesEnum.ElectricEngine, 954759)
                     , new Chassis(4, 659850, 600)
-                    , new Transmission(AveilableTransmissionTypes.AutomaticGearbox,4,"Huawei")
+                    , new Transmission(AveilableTransmissionTypesEnum.AutomaticGearbox,4,"Huawei")
                     ,16),
-                new Scooter(new Engine(59m, 0.6m, AveilableEngineTypes.ElectricEngine, 573445)
+                new Scooter(new Engine(59m, 0.6m, AveilableEngineTypesEnum.ElectricEngine, 573445)
                     , new Chassis(2, 45689384, 130)
-                    , new Transmission(AveilableTransmissionTypes.AutomaticGearbox,3,"Huawei")
-                    , AveilableColour.Blue),
-                new Truck(new Engine(800m, 8m, AveilableEngineTypes.DieselEngine, 5894582)
+                    , new Transmission(AveilableTransmissionTypesEnum.AutomaticGearbox,3,"Huawei")
+                    , AveilableColourEnum.Blue),
+                new Truck(new Engine(800m, 8m, AveilableEngineTypesEnum.DieselEngine, 5894582)
                     , new Chassis(4, 985498, 1000)
-                    , new Transmission(AveilableTransmissionTypes.MechanicalGearbox,5,"Huawei"),
+                    , new Transmission(AveilableTransmissionTypesEnum.MechanicalGearbox,5,"Huawei"),
                     250)
             };
             XmlSerializer formatter = new XmlSerializer(typeof(List<Vehicle>));

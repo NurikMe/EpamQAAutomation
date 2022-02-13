@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Xml.Serialization;
 
-namespace Task7.Car_Parts
+namespace FifthTask.CarParts
 {
     [Serializable]
     [XmlInclude(typeof(Engine))]
     [XmlInclude(typeof(Chassis))]
     [XmlInclude(typeof(Transmission))]
-    public abstract class Abstract_Part
+    public abstract class AbstractPart
     {
         protected abstract string Specification();
-        public override string ToString()
-        {
-            return Specification();
-        }
+
+        public override string ToString() => Specification();
     }
 }

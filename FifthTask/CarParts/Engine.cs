@@ -1,27 +1,29 @@
 ﻿using System;
 
 
-namespace Task7.Car_Parts
+namespace FifthTask.CarParts
 {
     [Serializable]
-    public class Engine : Abstract_Part
+    public class Engine : AbstractPart
     {
         public decimal EnginePower { get; set; }
 
         public decimal EngineVolume { get; set; }
 
-        public AveilableEngineTypes EngineType { get; set; }
+        public AveilableEngineTypesEnum EngineType { get; set; }
 
         public int SerialNumber { get; set; }
 
         private Engine() { }
-        public Engine(decimal newEnginePower, decimal newEngineVolume, AveilableEngineTypes newEngineType, int newSerialNumber)
+
+        public Engine(decimal newEnginePower, decimal newEngineVolume, AveilableEngineTypesEnum newEngineType, int newSerialNumber)
         {
             EnginePower = newEnginePower;
             EngineVolume = newEngineVolume;
             EngineType = newEngineType;
             SerialNumber = newSerialNumber;
         }
+
         protected override string Specification() => $"Engine Power: {EnginePower}\n\tEngine Volume: {EngineVolume}\n\tEngine Type: {EngineType}\n\tSerial Number: {SerialNumber}\n";
     }
 }

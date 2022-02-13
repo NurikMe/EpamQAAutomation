@@ -1,13 +1,13 @@
 ﻿using System;
-using Task7.Car_Parts;
+using FifthTask.CarParts;
 
-namespace Task7.Transport
+namespace FifthTask.Transport
 {
     [Serializable]
     public class Scooter : Vehicle
     {
 
-        private AveilableColour colour;
+        private AveilableColourEnum colour;
 
         public override Engine Engine { get; set; }
 
@@ -15,7 +15,7 @@ namespace Task7.Transport
 
         public override Transmission Transmission { get; set; }
 
-        public AveilableColour Colour
+        public AveilableColourEnum Colour
         {
             get { return colour; }
             set
@@ -26,7 +26,7 @@ namespace Task7.Transport
 
         private Scooter() : base(null, null, null) { }
 
-        public Scooter(Engine engine, Chassis chassis, Transmission transmission, AveilableColour newColour = AveilableColour.Black) : base(engine, chassis, transmission)
+        public Scooter(Engine engine, Chassis chassis, Transmission transmission, AveilableColourEnum newColour = AveilableColourEnum.Black) : base(engine, chassis, transmission)
         {
             Engine = engine;
             Chassis = chassis;

@@ -1,30 +1,19 @@
-﻿namespace Task7.Transport
+﻿namespace FifthTask.Transport
 {
-    public enum AveilableBodyTypes
-    {
-        Sedan,
-        Coupe,
-        SportsCar,
-        Hatchback,
-    };
     class BodyTypes
     {
-        public static string BodyType(AveilableBodyTypes type)
+        public static string BodyType(AveilableBodyTypesEnum type)
         {
             switch (type)
             {
-                case AveilableBodyTypes.Coupe:
+                case AveilableBodyTypesEnum.Coupe:
                     return "Coupe";
-                    break;
-                case AveilableBodyTypes.Hatchback:
+                case AveilableBodyTypesEnum.Hatchback:
                     return "Hatchback";
-                    break;
-                case AveilableBodyTypes.Sedan:
+                case AveilableBodyTypesEnum.Sedan:
                     return "Sedan";
-                    break;
-                case AveilableBodyTypes.SportsCar:
+                case AveilableBodyTypesEnum.SportsCar:
                     return "Sports Car";
-                    break;
             }
             return "None of aveilable types";
         }

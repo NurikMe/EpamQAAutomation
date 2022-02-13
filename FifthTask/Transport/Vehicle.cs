@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Xml.Serialization;
-using Task7.Car_Parts;
+using FifthTask.CarParts;
 
-namespace Task7.Transport
+namespace FifthTask.Transport
 {
     [Serializable]
     [XmlInclude(typeof(Bus))]
