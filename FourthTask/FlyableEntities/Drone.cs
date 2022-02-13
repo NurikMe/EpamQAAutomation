@@ -1,20 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task5.FlyableEntities
 {
-    class Drone : IFlyable
+    public class Drone : IFlyable
     {
         public Coordinate Position { get; private set; }
+
         public double Speed { get; private set; }
+
         public Drone(Coordinate startPoint, double speed)
         {
             Speed = speed;
             Position = startPoint;
         }
+
         public void FlyTo(Coordinate arrivalPoint)
         {
             if (Position.Distance(arrivalPoint) >= 1000)
@@ -23,7 +22,7 @@ namespace Task5.FlyableEntities
             }
             Position = arrivalPoint;
         }
-        
+
         public double GetFlyTime(Coordinate arrivalPoint)
         {
             double distance = Position.Distance(arrivalPoint);

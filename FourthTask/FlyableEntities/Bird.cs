@@ -2,16 +2,18 @@
 
 namespace Task5.FlyableEntities
 {
-    class Bird : IFlyable
+    public class Bird : IFlyable
     {
-        public Coordinate Position { get; private set; }
-
         private double speed;
+
+        public Coordinate Position { get; private set; }
+        
         public Bird(Coordinate startPoint)
         {
             Position = startPoint;
             speed = new Random().NextDouble() * 20;
         }
+        
         public void FlyTo(Coordinate arrivalPoint)
         {
             if (Position.Distance(arrivalPoint) >= 400)
@@ -20,6 +22,7 @@ namespace Task5.FlyableEntities
             }
             Position = arrivalPoint;
         }
+        
         public double GetFlyTime(Coordinate arrivalPoint)
         {
             if (Position.Distance(arrivalPoint) >= 400)

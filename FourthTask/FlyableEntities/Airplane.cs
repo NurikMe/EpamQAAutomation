@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace Task5.FlyableEntities
 {
-    class Airplane : IFlyable
+    public class Airplane : IFlyable
     {
         public Coordinate Position { get; private set; }
+
         public Airplane(Coordinate startPoint)
         {
             Position = startPoint;
         }
+        
         public void FlyTo(Coordinate arrivalPoint)
         {
             if (Position.Distance(arrivalPoint) < 10000)
@@ -24,6 +26,7 @@ namespace Task5.FlyableEntities
                 throw new ArgumentOutOfRangeException("Distance must be less than 10000");
             }
         }
+       
         public double GetFlyTime(Coordinate arrivalPoint)
         {
             double distance = Position.Distance(arrivalPoint);

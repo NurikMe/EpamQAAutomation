@@ -3,7 +3,7 @@ using Task5.FlyableEntities;
 
 namespace Task5
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {

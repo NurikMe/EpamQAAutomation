@@ -2,9 +2,12 @@
 
 namespace Task5.FlyableEntities
 {
-    struct Coordinate
+    public struct Coordinate
     {
         private int x;
+        private int y;
+        private int z;
+
         public int X
         {
             get { return x; }
@@ -21,7 +24,6 @@ namespace Task5.FlyableEntities
             }
         }
 
-        private int y;
         public int Y
         {
             get { return y; }
@@ -38,7 +40,6 @@ namespace Task5.FlyableEntities
             }
         }
 
-        private int z;
         public int Z
         {
             get { return z; }
