@@ -3,21 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Task4.CarParts;
+using ThirdTask.CarParts;
 
-namespace Task4.Transport
+namespace ThirdTask.Transport
 {
     class Bus : Vehicle
     {
         public int Seats { get; set; }
-        public Bus(Engine engine, Chassis chassis, Transmission transmission, int seats = 20) : base(engine, chassis, transmission)
-        {
-            Engine = engine;
-            Chassis = chassis;
-            Transmission = transmission;
-            Seats = seats;
-        }
         private Engine engine;
+        
         public override Engine Engine
         {
             get
@@ -37,15 +31,18 @@ namespace Task4.Transport
             }
         }
 
-        private Chassis chassis;
         public override Chassis Chassis { get; set; }
 
-        private Transmission transmission;
         public override Transmission Transmission { get; set; }
 
-        protected override string Specification()
+        public Bus(Engine engine, Chassis chassis, Transmission transmission, int seats = 20) : base(engine, chassis, transmission)
         {
-            return $"Car:\n\t{Engine}\n\t{Chassis}\n\t{Transmission}\n\t{Seats}";
+            Engine = engine;
+            Chassis = chassis;
+            Transmission = transmission;
+            Seats = seats;
         }
+
+        protected override string Specification() => $"Car:\n\t{Engine}\n\t{Chassis}\n\t{Transmission}\n\t{Seats}";
     }
 }

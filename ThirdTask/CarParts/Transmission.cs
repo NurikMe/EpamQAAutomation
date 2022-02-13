@@ -1,17 +1,13 @@
 ﻿using System;
 
-namespace Task4.CarParts
+namespace ThirdTask.CarParts
 {
     public class Transmission : AbstractPart
     {
-        public Transmission(AveilableTransmissionTypes newTransmissionType, int newNumberOfGears, string newProducer)
-        {
-            TransmissionType = newTransmissionType;
-            NumberOfGears = newNumberOfGears;
-            Producer = newProducer;
-        }
-
         private AveilableTransmissionTypes transmissionType;
+        private int numberOfGears;
+        private string producer;
+
         public AveilableTransmissionTypes TransmissionType
         {
             get { return transmissionType; }
@@ -21,7 +17,6 @@ namespace Task4.CarParts
             }
         }
 
-        private int numberOfGears;
         public int NumberOfGears
         {
             get { return numberOfGears; }
@@ -38,7 +33,6 @@ namespace Task4.CarParts
             }
         }
 
-        private string producer;
         public string Producer
         {
             get { return producer; }
@@ -55,9 +49,13 @@ namespace Task4.CarParts
             }
         }
 
-        protected override string Specification()
+        public Transmission(AveilableTransmissionTypes newTransmissionType, int newNumberOfGears, string newProducer)
         {
-            return String.Format($"Transmission Type: {TransmissionType}\n\tNumber of Gears: {NumberOfGears}\n\tTransmission Producer: {Producer}\n");
+            TransmissionType = newTransmissionType;
+            NumberOfGears = newNumberOfGears;
+            Producer = newProducer;
         }
+
+        protected override string Specification() => String.Format($"Transmission Type: {TransmissionType}\n\tNumber of Gears: {NumberOfGears}\n\tTransmission Producer: {Producer}\n");
     }
 }

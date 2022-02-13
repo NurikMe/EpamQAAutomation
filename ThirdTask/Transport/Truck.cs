@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Task4.CarParts;
+using ThirdTask.CarParts;
 
-namespace Task4.Transport
+namespace ThirdTask.Transport
 {
     class Truck : Vehicle
     {

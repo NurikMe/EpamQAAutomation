@@ -1,8 +1,8 @@
 ﻿using System;
-using Task4.CarParts;
-using Task4.Transport;
+using ThirdTask.CarParts;
+using ThirdTask.Transport;
 
-namespace Task4
+namespace ThirdTask
 {
     class Program
     {

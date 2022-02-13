@@ -1,11 +1,15 @@
 ﻿using System;
 
 
-namespace Task4.CarParts
+namespace ThirdTask.CarParts
 {
     public class Engine : AbstractPart
     {
         private decimal enginePower;
+        private decimal engineVolume;
+        private AveilableEngineTypes engineType;
+        private int serialNumber;
+
         public decimal EnginePower
         {
             get { return enginePower; }
@@ -22,7 +26,6 @@ namespace Task4.CarParts
             }
         }
 
-        private decimal engineVolume;
         public decimal EngineVolume
         {
             get { return engineVolume; }
@@ -39,7 +42,6 @@ namespace Task4.CarParts
             }
         }
 
-        private AveilableEngineTypes engineType;
         public AveilableEngineTypes EngineType
         {
             get { return engineType; }
@@ -49,7 +51,6 @@ namespace Task4.CarParts
             }
         }
 
-        private int serialNumber;
         public int SerialNumber
         {
             get { return serialNumber; }
@@ -66,7 +67,6 @@ namespace Task4.CarParts
             }
         }
 
-
         public Engine(decimal newEnginePower, decimal newEngineVolume, AveilableEngineTypes newEngineType, int newSerialNumber)
         {
             EnginePower = newEnginePower;
@@ -74,9 +74,7 @@ namespace Task4.CarParts
             EngineType = newEngineType;
             SerialNumber = newSerialNumber;
         }
-        protected override string Specification()
-        {
-            return String.Format($"Engine Power: {EnginePower}\n\tEngine Volume: {EngineVolume}\n\tEngine Type: {EngineType}\n\tSerial Number: {SerialNumber}\n");
-        }
+
+        protected override string Specification() => String.Format($"Engine Power: {EnginePower}\n\tEngine Volume: {EngineVolume}\n\tEngine Type: {EngineType}\n\tSerial Number: {SerialNumber}\n");
     }
 }

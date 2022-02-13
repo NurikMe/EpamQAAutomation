@@ -1,18 +1,13 @@
 ﻿using System;
-using Task4.CarParts;
+using ThirdTask.CarParts;
 
-namespace Task4.Transport
+namespace ThirdTask.Transport
 {
     class Scooter : Vehicle
     {
-        public Scooter(Engine engine, Chassis chassis, Transmission transmission, AveilableColour newColour = AveilableColour.Black) : base(engine, chassis, transmission)
-        {
-            Engine = engine;
-            Chassis = chassis;
-            Transmission = transmission;
-            Colour = newColour;
-        }
         private Engine engine;
+        private AveilableColour colour;
+
         public override Engine Engine
         {
             get
@@ -32,13 +27,10 @@ namespace Task4.Transport
             }
         }
 
-        private Chassis chassis;
         public override Chassis Chassis { get; set; }
 
-        private Transmission transmission;
         public override Transmission Transmission { get; set; }
 
-        private AveilableColour colour;
         public AveilableColour Colour
         {
             get { return colour; }
@@ -48,9 +40,14 @@ namespace Task4.Transport
             }
         }
 
-        protected override string Specification()
+        public Scooter(Engine engine, Chassis chassis, Transmission transmission, AveilableColour newColour = AveilableColour.Black) : base(engine, chassis, transmission)
         {
-            return $"Car:\n\t{Engine}\n\t{Chassis}\n\t{Transmission}\n\t{Colour}";
+            Engine = engine;
+            Chassis = chassis;
+            Transmission = transmission;
+            Colour = newColour;
         }
+
+        protected override string Specification() => $"Car:\n\t{Engine}\n\t{Chassis}\n\t{Transmission}\n\t{Colour}";
     }
 }
