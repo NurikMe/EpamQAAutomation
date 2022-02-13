@@ -3,7 +3,7 @@ using System.Text;
 
 namespace FirstTask
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -14,6 +14,5 @@ namespace FirstTask
                 Console.WriteLine(amountOfSymbols);
             }
         }
-        
     }
 }
