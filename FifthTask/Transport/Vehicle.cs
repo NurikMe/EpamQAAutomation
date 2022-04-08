@@ -30,5 +30,7 @@ namespace FifthTask.Transport
         {
             return Specification();
         }
+
+        protected abstract Vehicle GetAutoByParameter(string parameter, string value);
     }
 }
