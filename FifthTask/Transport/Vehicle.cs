@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Xml.Serialization;
-using FifthTask.CarParts;
+using CollectionsAndExceptions.CarParts;
+using CollectionsAndExceptions.Exceptions;
 
-namespace FifthTask.Transport
+namespace CollectionsAndExceptions.Transport
 {
     [Serializable]
     [XmlInclude(typeof(Bus))]
@@ -15,6 +16,10 @@ namespace FifthTask.Transport
 
         public Vehicle(Engine engine, Chassis chassis, Transmission transmission)
         {
+            if (engine == null || chassis == null || transmission == null)
+            {
+                throw new InitializationException();
+            }
             Engine = engine;
             Chassis = chassis;
             Transmission = transmission;
@@ -30,7 +35,5 @@ namespace FifthTask.Transport
         {
             return Specification();
         }
-
-        protected abstract Vehicle GetAutoByParameter(string parameter, string value);
     }
 }

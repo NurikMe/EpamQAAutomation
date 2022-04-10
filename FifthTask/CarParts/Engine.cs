@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace FifthTask.CarParts
+namespace CollectionsAndExceptions.CarParts
 {
     [Serializable]
     public class Engine : AbstractPart

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
 
-namespace FifthTask.CarParts
+namespace CollectionsAndExceptions.CarParts
 {
     [Serializable]
     [XmlInclude(typeof(Engine))]

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FifthTask.CarParts
+namespace CollectionsAndExceptions.CarParts
 {
     [Serializable]
     public class Transmission : AbstractPart

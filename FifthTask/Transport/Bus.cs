@@ -1,7 +1,7 @@
 ﻿using System;
-using FifthTask.CarParts;
+using CollectionsAndExceptions.CarParts;
 
-namespace FifthTask.Transport
+namespace CollectionsAndExceptions.Transport
 {
     [Serializable]
     public class Bus : Vehicle

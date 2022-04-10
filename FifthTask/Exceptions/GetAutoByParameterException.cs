@@ -1,9 +1,13 @@
 ﻿using System;
 
-namespace FifthTask.Exceptions
+namespace CollectionsAndExceptions.Exceptions
 {
-    public class GetAutoByParameterException : Exception
+    public class GetAutoByParameterException : VehicleException
     {
+        public GetAutoByParameterException() : base() { }
+
         public GetAutoByParameterException(string message) : base(message) { }
+
+        public GetAutoByParameterException(string message, Exception innerException) : base(message, innerException) { }
     }
 }

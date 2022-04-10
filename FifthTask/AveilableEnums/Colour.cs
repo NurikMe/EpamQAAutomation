@@ -1,5 +1,5 @@
 ﻿
-namespace FifthTask.Transport
+namespace CollectionsAndExceptions.Transport
 {
     class Colours
     {
